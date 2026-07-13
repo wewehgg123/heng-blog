@@ -2,7 +2,7 @@
 # 深色顶栏 + 文章卡片 + 中文支持
 
 title = "Heng's Blog"
-baseURL = "https://github.com/wewehgg123/heng-blog"
+baseURL = "https://wewehgg123.github.io/heng-blog/"
 enableRobotsTXT = true
 defaultContentLanguage = "zh-cn"
 theme = "bilberry-hugo-theme/v4"
