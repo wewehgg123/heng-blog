@@ -1,0 +1,123 @@
+# ===== Bilberry Hugo Theme v4 配置 =====
+# 深色顶栏 + 文章卡片 + 中文支持
+
+title = "Heng's Blog"
+baseURL = "https://example.com/"
+enableRobotsTXT = true
+defaultContentLanguage = "zh-cn"
+theme = "bilberry-hugo-theme/v4"
+
+# ===== 主题参数 =====
+[params]
+  # 自定义 CSS（从 static/ 加载）
+  css_modules = ["/css/custom.css"]
+  js_modules  = []
+
+  # ===== 颜色定制（Bilberry v4 模板变量）=====
+  siteWidth     = "1100px"
+  pageBackgroundColor = "#f5f5f5"
+  baseColor     = "#1a1a2e"        # 深藏蓝 — 头部/顶栏背景
+  specialColor  = "#16213e"        # 导航条背景
+  highlightColor = "#0077b6"       # 链接高亮
+  textColor     = "#222"
+  navBackgroundColor = "#16213e"
+  navTextColor  = "#ffffff"
+
+  authorName  = "Heng"
+  authorEmail = ""
+  description = "有思考，有创造 — 技术、思考与生活的个人博客"
+  keywords    = "技术,思考,生活,博客,Hugo"
+
+  paginate = 7
+
+  algolia_search = false
+  giscus = false
+  disqusShortname = ""
+  resizeImages = true
+
+  # 头部
+  subtitle    = "有思考，有创造"
+  avatarEmail = ""
+  customImage = "/img/avatar.png"
+  overlayIcon = ""
+
+  # 导航
+  permanentTopNav = true
+  stickyNav       = false
+  showHeaderLanguageChooser = false
+
+  # 内容
+  enableMomentJs    = true
+  dateFormat        = "2006-01-02"
+  showReadingTime   = true
+  tocMinWordCount   = 400
+
+  # 页脚
+  showFooter = true
+  amountLatestPostsInFooter = 5
+  amountCategoriesInFooter  = 10
+  showFooterLanguageChooser = false
+  showSocialMedia = true
+  showArchive     = true
+  archiveDateGrouping = "2006-01"
+
+  socialMediaLinks = [
+    { link = "https://github.com/henghx", icon = "fab fa-github" },
+  ]
+
+  copyrightBy           = "by Heng"
+  copyrightUseCurrentYear = true
+  copyrightUrl          = ""
+  creditsText           = "Powered by Hugo & Bilberry"
+  creditsUrl            = "https://github.com/Lednerb/bilberry-hugo-theme"
+
+# ===== 导航菜单 =====
+[menu]
+  [[menu.topnav]]
+    name   = "首页"
+    url    = "/"
+    weight = 1
+  [[menu.topnav]]
+    name   = "归档"
+    url    = "/archive/"
+    weight = 2
+  [[menu.topnav]]
+    name   = "标签"
+    url    = "/tags/"
+    weight = 3
+  [[menu.topnav]]
+    name   = "关于"
+    url    = "/page/about/"
+    weight = 4
+
+# ===== 多语言 =====
+[languages]
+  [languages.zh-cn]
+    weight = 1
+    title  = "Heng's Blog"
+    [languages.zh-cn.params]
+      subtitle = "有思考，有创造"
+
+# ===== 分类法 =====
+[taxonomies]
+  author   = "author"
+  tag      = "tags"
+  category = "categories"
+  series   = "series"
+
+# ===== 输出 =====
+[outputs]
+  home = ["HTML", "JSON", "RSS"]
+  page = ["HTML"]
+
+# ===== Markdown =====
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark.renderer]
+    unsafe = false
+  [markup.highlight]
+    style = "monokai"
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel   = 5
+    ordered    = false

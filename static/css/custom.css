@@ -1,0 +1,201 @@
+/* ============================================
+   Heng's Blog — 自定义样式
+   匹配参考图：两栏布局 + 右侧边栏 + 卡片样式
+   ============================================ */
+
+/* ---- 1. 通用全局 ---- */
+body {
+  font-family: 'Open Sans', 'Noto Sans SC', sans-serif;
+}
+
+a {
+  color: #0077b6;
+}
+a:hover {
+  color: #005b8f;
+}
+
+/* ---- 2. 顶栏微调 ---- */
+.topnav {
+  background-color: #16213e;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+.topnav .topnav-content {
+  max-width: 1100px;
+}
+.topnav .site-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+.topnav .site-subtitle {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  margin-left: 12px;
+}
+
+/* ---- 3. 首页两栏布局（文章 + 侧边栏）---- */
+.home-content-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.home-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.home-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+/* ---- 4. 文章卡片 ---- */
+.article-wrapper {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  margin-bottom: 24px;
+  padding: 24px;
+  transition: box-shadow 0.2s ease;
+}
+.article-wrapper:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.article-wrapper .article-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.article-wrapper .article-title a {
+  color: #222;
+  text-decoration: none;
+}
+.article-wrapper .article-title a:hover {
+  color: #0077b6;
+}
+
+/* 元信息行：日期 | 标签 | 阅读时长 */
+.article-wrapper .article-meta {
+  color: #999;
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+.article-wrapper .article-meta i {
+  margin-right: 4px;
+}
+
+/* 摘要 */
+.article-wrapper .article-content-summary {
+  color: #555;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* 阅读更多 */
+.article-wrapper .read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #0077b6;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.article-wrapper .read-more:hover {
+  color: #005b8f;
+  text-decoration: underline;
+}
+
+/* ---- 5. 右侧边栏 ---- */
+.sidebar-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.sidebar-card .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #0077b6;
+  color: #333;
+}
+
+/* 作者卡片 */
+.author-card {
+  text-align: center;
+}
+.author-card .author-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 12px;
+  border: 3px solid #eee;
+}
+.author-card .author-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #222;
+}
+.author-card .author-bio {
+  color: #888;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* 标签云 */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tag-cloud a {
+  display: inline-block;
+  background: #f0f0f0;
+  color: #666;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.tag-cloud a:hover {
+  background: #0077b6;
+  color: #fff;
+}
+
+/* ---- 6. 页脚微调 ---- */
+.footer {
+  background: #1a1a2e;
+  color: rgba(255,255,255,0.7);
+}
+.footer a {
+  color: rgba(255,255,255,0.9);
+}
+.footer .credits {
+  color: rgba(255,255,255,0.5);
+}
+
+/* ---- 7. 响应式 ---- */
+@media (max-width: 900px) {
+  .home-content-wrapper {
+    flex-direction: column;
+    padding: 20px 10px;
+  }
+  .home-sidebar {
+    width: 100%;
+  }
+}
