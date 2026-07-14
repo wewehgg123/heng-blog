@@ -94,9 +94,9 @@ theme = "bilberry-hugo-theme/v4"
 [languages]
   [languages.zh-cn]
     weight = 1
-    title  = "Heng's Blog"
+    title  = "wewe's 随想"
     [languages.zh-cn.params]
-      subtitle = "有思考，有创造"
+      subtitle = "瞎写写瞎记记"
 
 # ===== 分类法 =====
 [taxonomies]
