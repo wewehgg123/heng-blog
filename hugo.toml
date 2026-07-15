@@ -25,8 +25,8 @@ theme = "bilberry-hugo-theme/v4"
 
   authorName  = "Heng"
   authorEmail = ""
-  description = "有思考，有创造 — 技术、思考与生活的个人博客"
-  keywords    = "技术,思考,生活,博客,Hugo"
+  description = ""
+  keywords    = ""
 
   paginate = 7
 
@@ -36,9 +36,9 @@ theme = "bilberry-hugo-theme/v4"
   resizeImages = true
 
   # 头部
-  subtitle    = "有思考，有创造"
+  subtitle    = ""
   avatarEmail = ""
-  customImage = "/img/avatar.png"
+  customImage = "/img/avatar.jpg"
   overlayIcon = ""
 
   # 导航
