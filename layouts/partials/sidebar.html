@@ -3,9 +3,9 @@
 <!-- 作者卡片 -->
 <div class="sidebar-card author-card">
   <img class="author-avatar"
-       src="{{ .Site.Params.customImage | default "/img/avatar.png" }}"
+       src="{{ .Site.Params.customImage | default "/img/avatar.jpg" }}"
        alt="{{ .Site.Params.authorName | default "Author" }}"
-       onerror="this.src='/img/avatar.png'">
+       onerror="this.src='/img/avatar.jpg'">
   <div class="author-name">{{ .Site.Params.authorName | default "Heng" }}</div>
   <div class="author-bio">{{ .Site.Params.description | default "有思考，有创造" }}</div>
 </div>
